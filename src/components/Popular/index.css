@@ -3,7 +3,6 @@
     font-style: normal;
     font-weight: 400;
     font-size: 40px;
-
 }
 
 .popular-title >span {
@@ -28,4 +27,21 @@
 .location-count {
     font-size: 14px;
     color: rgba(40, 40, 40, 0.7);
+}
+
+@media screen and (max-width:767px) {
+    .popular-title {
+        font-size: 30px;
+    }
+}
+@media screen and (max-width:575px) {
+    .popular-title {
+        font-size: 20px;
+    }
+    .location-name {
+        font-size: 15px;
+    }
+    .location-count {
+        font-size: 12px;
+    }
 }

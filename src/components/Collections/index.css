@@ -7,12 +7,12 @@
 .card-img-overlay{
     top:auto !important;
 }
-.collections-first {
+.collections-left {
     font-size: 20px;
     color:#282828;
     letter-spacing: -1px;
 }
-.collections-second {
+.collections-right {
     font-size: 18px;
     color: rgba(238, 46, 43, 0.7);
 }
@@ -28,4 +28,19 @@
 .card-item img {
     height: 100%;
     width : 250px;
+}
+
+@media screen and (max-width:575px) {
+    .collections-title {
+        font-size: 30px;
+    }
+    .collections {
+        flex-direction: column;
+    }
+    .collections-left {
+        font-size: 18px;
+    }
+    .collections-right {
+        font-size: 15px;
+    }
 }

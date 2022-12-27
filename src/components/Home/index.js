@@ -6,10 +6,10 @@ export default function index() {
         <>
             <section className="banner">
                 <div className="banner-cont">
-                    <div className="d-flex flex-column align-items-center">
+                    <div className="d-flex flex-column align-items-center align-items-xs-start">
 
                         <h2 className="banner-title"><img src="./images/banner-icon.png" alt="bannerIcon" className='banner-icon'/>NOM-<span >NOM</span></h2>
-                        <h3 className="banner-sub-title">Discover the best food &amp; drinks in mumbai</h3>
+                        <h3 className="banner-sub-title text-center">Discover the best food &amp; drinks in mumbai</h3>
 
                         <div className="search-cont d-flex align-items-center ">
                             <div className="location-cont">

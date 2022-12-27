@@ -5,8 +5,8 @@ import "./index.css"
 const Explore = () => {
   return (
     <>
-      <section className='container'>
-        <div className='row explore-section mb-5'>
+      <section className='container mb-2 mb-xs-5'>
+        <div className='row explore-section'>
           <h2 className='explore-title mb-3'>Explore options near me</h2>
           <div className='col'>
             <div className='d-flex justify-content-between align-items-center explore-things m-0 mb-2'>

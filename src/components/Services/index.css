@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap');
 
-.services-cont{
-    margin:40px 0px
-}
+
 .services-image {
     height:150px;
     width:100%;
@@ -21,4 +19,19 @@
 .services-description{
     font-size: 16px;
     color: #282828;
+}
+
+@media screen and (max-width:575px) {
+    .services-content{
+        padding:15px 25px;
+    }
+    .services-title {
+        font-size: 15px;
+    }
+    .services-description{
+        font-size: 12px;
+    }
+    .services-image {
+        height:125px;
+    }
 }

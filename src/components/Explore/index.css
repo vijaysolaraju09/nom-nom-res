@@ -14,3 +14,17 @@
     color: #282828;
     margin: 0;
 }
+
+@media screen and (max-width:767px) {
+    .explore-title {
+        font-size: 30px;
+    }
+}
+@media screen and (max-width:575px) {
+    .explore-title {
+        font-size: 20px;
+    }
+    .explore-things > p {
+        font-size: 15px;
+    }
+}

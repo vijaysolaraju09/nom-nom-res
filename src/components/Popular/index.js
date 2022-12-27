@@ -3,7 +3,7 @@ import "./index.css";
 
 const Popular = () => {
     return (
-        <section className="container mb-5" >
+        <section className="container mb-2 mb-xs-5" >
             <div className="row mb-2">
                 <h1 className="popular-title">
                     Popular localities in and around <span>Mumbai.</span>
