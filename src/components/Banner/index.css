@@ -6,6 +6,9 @@
   background-size: cover;
   height: 460px;
 }
+.banner * {
+  color: #FFFFFF;
+}
 
 .banner-cont {
   background: rgba(0, 0, 0, 0.6);

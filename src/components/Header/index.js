@@ -1,6 +1,6 @@
 import React from "react";
 import "./index.css";
-
+import {Link} from 'react-router-dom'
 
 const Navbar = () => {
   return (
@@ -8,7 +8,7 @@ const Navbar = () => {
       <header className="header container-fluid">
         
         <nav className="navbar navbar-expand-lg navbar-light ">
-          <a className="nav-brands navbar-brand" href="/"><img className='nav-logos mb-1' src="./images/get-app-icon.png" alt="logo" />Get the App</a>
+          <Link className="nav-brands navbar-brand" to="/"><img className='nav-logos mb-1' src="./images/get-app-icon.png" alt="logo" />Get the App</Link>
           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
@@ -21,10 +21,10 @@ const Navbar = () => {
                 <a className="nav-link" href="#">Add restaurant</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">Log in</a>
+                <Link className="nav-link" to="/login">Log in</Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">Sign Up</a>
+                <Link className="nav-link" to="/signup">Sign Up</Link>
               </li>
             </ul>
           </div>

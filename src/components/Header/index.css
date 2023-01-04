@@ -3,6 +3,7 @@
   position: absolute;
   width: 100%;
   top: 0;
+  background-color: #00000045;
   padding: 45px 100px 0;
 }
 .nav-brands {
