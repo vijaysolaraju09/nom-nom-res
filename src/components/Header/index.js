@@ -18,7 +18,7 @@ const Navbar = () => {
                 <a className="nav-link" href="#">Investor Relations</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">Add restaurant</a>
+                <Link className="nav-link" to='/restaurants'>Add restaurant</Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/login">Log in</Link>

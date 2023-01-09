@@ -1,0 +1,7 @@
+.wel-come {
+    display: flex;
+    text-align: center;
+}
+.welcome-cont {
+    display: inline-block;
+}

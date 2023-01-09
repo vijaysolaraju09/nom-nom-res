@@ -1,74 +1,52 @@
-import React from "react";
+import { useState } from "react";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import './index.css'
 import { Formik } from "formik";
 import * as EmailValidator from "email-validator";
 import * as Yup from "yup";
+import { useNavigate } from "react-router-dom";
+import { UserAuth } from '../../context/AuthContext';
   
-const LoginPage = () => (
-  <Formik
-    initialValues={{ email: "", password: "" }}
-    onSubmit={(values, { setSubmitting }) => {
-      setTimeout(() => {
-        console.log("Logging in", values);
-        setSubmitting(false);
-      }, 500);
-    }}
+function LoginPage () {
+  const [loginEmail, setLoginEmail] = useState("");
+  const [loginPassword, setLoginPassword] = useState("");
+  const auth = getAuth();
+  const navigate= useNavigate()
+  const { signIn } = UserAuth();
 
-    validationSchema={Yup.object().shape({
-      email: Yup.string()
-        .email()
-        .required("Required"),
-      password: Yup.string()
-        .required("No password provided.")
-        .min(8, "Password is too short - should be 8 chars minimum.")
-        .matches(/(?=.*[0-9])/, "Password must contain a number.")
-    })}
-  >
-    {props => {
-      const {
-        values,
-        touched,
-        errors,
-        isSubmitting,
-        handleChange,
-        handleBlur,
-        handleSubmit
-      } = props;
+  const login = async (e) => {
+    console.log("hi")
+    e.preventDefault();
+    try {
+      await signIn(loginEmail, loginPassword)
+      alert("Logged in Successfully")
+      navigate("/home")
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
       return (
-        <form className="form-container" onSubmit={handleSubmit}>
+        <form className="form-container" onSubmit={login}>
           <label htmlFor="email">Email</label>
           <input
             name="email"
             type="text"
             placeholder="Enter your email"
-            value={values.email}
-            onChange={handleChange}
-            onBlur={handleBlur}
-            className={errors.email && touched.email && "error"}
+            onChange={e => setLoginEmail(e.target.value)}
           />
-          {errors.email && touched.email && (
-            <div className="error-msg">{errors.email}</div>
-          )}
           <label htmlFor="email">Password</label>
           <input
             name="password"
             type="password"
             placeholder="Enter your password"
-            value={values.password}
-            onChange={handleChange}
-            onBlur={handleBlur}
-            className={errors.password && touched.password && "error"}
+            onChange={e => setLoginPassword(e.target.value)}
           />
-          {errors.password && touched.password && (
-            <div className="error-msg">{errors.password}</div>
-          )}
-          <button type="submit" disabled={isSubmitting}>
+          <button type="submit" >
             Login
           </button>
         </form>
       );
-    }}
-  </Formik>
-);
+
+          };
 
 export default LoginPage;

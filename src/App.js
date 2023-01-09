@@ -2,32 +2,36 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
+import { AuthContextProvider } from './context/AuthContext';
 import Header from './components/Header';
-import Banner from "./components/Banner"
-import Services from './components/Services'
-import Collections from "./components/Collections"
-import Popular from './components/Popular'
-import Explore from './components/Explore'
-import Footer from './components/Footer';
 import LoginPage from './components/LoginPage'
 import SignupPage from './components/SignupPage'
 import Home from './components/Home';
-
+import Welcome from './components/Welcome'
+import Restaurants from './components/Restaurants'
+import Protected from './components/Protected';
+import { useEffect, useState, createContext } from 'react';
+export const authentication = createContext();
 
 function App() {
-    return (
-      <>
-        <BrowserRouter>
-          <Header />
+
+  return (
+    <>
+      <BrowserRouter>
+        <Header />
+        <AuthContextProvider>
           <Routes>
-            <Route path='/' element={<Home />}></Route>
+            <Route path='/' element={<Welcome />}></Route>
+            <Route path='/home' element={<Protected><Home /></Protected>} ></Route>
+            <Route path='/restaurants' element={<Protected><Restaurants /></Protected>}></Route>
             <Route path='/login' element={<LoginPage />}></Route>
             <Route path='/signup' element={<SignupPage />}></Route>
           </Routes>
-        </BrowserRouter>
-      </>
-    );
-  }
-  
+        </AuthContextProvider>
+      </BrowserRouter>
+    </>
+  );
+}
+
 
 export default App;
