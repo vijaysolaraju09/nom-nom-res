@@ -63,13 +63,6 @@ function SignupPage() {
           className=""
           onChange={(event) => { setRegisterPassword(event.target.value) }}
         />
-        <label htmlFor="username">Username</label>
-        <input
-          name="username"
-          type="text"
-          placeholder="Username"
-          onChange={(event) => { setUsername(event.target.value) }}
-        />
         <div className="">
           <button type="submit" onClick={register}>
             Signup
