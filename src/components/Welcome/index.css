@@ -1,7 +1,27 @@
-.wel-come {
-    display: flex;
-    text-align: center;
-}
 .welcome-cont {
-    display: inline-block;
+    padding: 75px;
+}
+.welcome {
+    background: #d2eaff;
+}
+.welcome-cont > div {
+    background: white;
+}
+.welcome-img {
+    border-bottom-right-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+}
+.register-btn {
+    font-size: 18px;
+    background-color:  rgb(70, 153, 179);
+    color: white;
+    padding-right: 80px;
+    padding-left: 80px;
+}
+.register-btn:hover {
+    border: 1px solid rgb(70, 153, 179);
+    color: rgb(70, 153, 179);
+}
+.sign-in-link {
+    color: rgb(70, 153, 179);
 }

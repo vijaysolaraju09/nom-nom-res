@@ -1,0 +1,23 @@
+.res-details {
+    margin-top: 100px;
+    background: #d2eaff;
+}
+.review-icon {
+    font-size: 20px;
+}
+.nav-tabs .nav-link:focus {
+    color: black;
+}
+.timings-tab *, .timings-tab *:focus, .timings-tab *:hover {
+    color: black !important;
+}
+.timings-tab *:focus {
+    background: rgb(238 238 238) !important;
+}
+
+.timings {
+    background: rgb(238 238 238);
+    border-radius: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}

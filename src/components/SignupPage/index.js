@@ -6,13 +6,9 @@ import { useNavigate } from "react-router-dom";
 import { UserAuth } from '../../context/AuthContext';
 
 function SignupPage() {
-  const [username, setUsername] = useState("");
   const [email, setRegisterEmail] = useState("");
   const [password, setRegisterPassword] = useState("");
-  const [loginEmail, setLoginEmail] = useState("");
-  const [loginPassword, setLoginPassword] = useState("");
   const auth = getAuth();
-  const [user, setUser] = useState({});
   const navigate = useNavigate();
   const { createUser } = UserAuth();
 
@@ -26,7 +22,6 @@ function SignupPage() {
     e.preventDefault();
     try {
       await createUser(email, password);
-      console.log(user);
       alert("Registered successfully")
       navigate("/login")
     } catch (error) {
@@ -45,33 +40,43 @@ function SignupPage() {
   }
 
   return (
-    <div className="form-container">
-      <form >
-        <label htmlFor="email">Email</label>
-        <input
-          name="email"
-          type="text"
-          placeholder="Enter email ID"
-          className=""
-          onChange={(event) => { setRegisterEmail(event.target.value) }}
-        />
-        <label htmlFor="email">Password</label>
-        <input
-          name="password"
-          type="password"
-          placeholder="Enter password"
-          className=""
-          onChange={(event) => { setRegisterPassword(event.target.value) }}
-        />
-        <div className="">
-          <button type="submit" onClick={register}>
-            Signup
-          </button>
+    <div className="login-page d-flex flex-column justify-content-center">
+      <div className="container d-flex flex-column align-items-center">
+        <div className="shadow login-cont rounded-5 p-5 mt-5 d-flex flex-column align-items-center">
+          <h2 className=" mb-2 ">Welcome User</h2>
+          <p className=" text-secondary  mb-4 ">Please Register for free to get started.</p>
+          
+            <form className="form-container mx-5 my-3">
+              <label htmlFor="email">Email</label>
+              <input
+                name="email"
+                type="text"
+                placeholder="Enter email ID"
+                className=""
+                onChange={(event) => { setRegisterEmail(event.target.value) }}
+              />
+              <label htmlFor="email">Password</label>
+              <input
+                name="password"
+                type="password"
+                placeholder="Enter password"
+                className=""
+                onChange={(event) => { setRegisterPassword(event.target.value) }}
+              />
+              <div className="">
+                <button type="submit" onClick={register} className="sign-up-btn">
+                  Signup
+                </button>
+              </div>
+            </form>
+            <div className='horizontal-line mb-3'>
+              <hr />
+              <span>OR</span>
+            </div>
+            <button className="login-with-google-btn " onClick={signInWithGoogle}><i className="fab fa-google"></i>Sign in with google</button>
+          </div>
         </div>
-      </form>
-      <button className="login-with-google-btn " onClick={signInWithGoogle}><i className="fab fa-google"></i>Sign in with google</button>
-
-    </div>
+      </div>
 
 
   )

@@ -5,7 +5,8 @@
     color:#282828;
 }
 .card-img-overlay{
-    top:auto !important;
+    top: 75% !important;
+    background-image: linear-gradient(359deg, black, transparent);
 }
 .collections-left {
     font-size: 20px;
@@ -17,20 +18,24 @@
     color: rgba(238, 46, 43, 0.7);
 }
 
+.cards-title, .cards-text {
+    font-weight: normal;
+    color: white;
+}
 .cards-title {
     font-size: 20px;
-    -webkit-text-stroke: 0.5px black;
 }
 .cards-text {
     font-size: 18px;
-    -webkit-text-stroke: 0.5px black;
+    color: white;
 }
-.card-item img {
-    height: 100%;
-    width : 250px;
+@media screen and (max-width: 991px) {
+    .collections-container {
+        flex-wrap: wrap;
+    }
 }
-
 @media screen and (max-width:575px) {
+    
     .collections-title {
         font-size: 30px;
     }

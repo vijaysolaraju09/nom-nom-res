@@ -13,9 +13,9 @@ function Footer() {
             <div className='footer'>
                 <div className='container footer-cont'>
                     <div className='d-flex justify-content-between align-items-center mb-5 footer-top'>
-                        <a className='d-flex text-decoration-none align-items-center mb-3 mb-sm-0'>
+                        <a className='d-flex text-decoration-none  mb-3 mb-sm-0'>
                             <img src='./images/footer-logo.png' alt='footer-logo' className='footer-logo'/>
-                            <h3 className='footer-title ms-1 ms-m-3'>NOM-NOM</h3>
+                            <h3 className='footer-title ms-1 ms-m-3 m-lg-0'>NOM-NOM</h3>
                         </a>
                         <div className='d-flex'>
                             <div className='footer-location-cont me-3 d-flex align-items-center'>
@@ -33,7 +33,7 @@ function Footer() {
                                     src="./images/globe-icon.png"
                                     alt="language"
                                 />
-                                <select className='border-0'>
+                                <select className='border-0 lang-dropdown'>
                                     <option>English</option>
                                     <option>Hindhi</option>
                                 </select>
@@ -196,12 +196,12 @@ function Footer() {
                                 </a>
 
                             </li>
-                            <li className="mt-4">
+                            <li className="mt-3">
                                 <a href="/">
                                     <img src="./images/play-store.png" alt="play store" />
                                 </a>
                             </li>
-                            <li className="mt-3">
+                            <li className="mt-2">
                                 <a href="/">
                                     <img src="./images/app-store.png" alt="apple store" />
                                 </a>

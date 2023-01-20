@@ -5,15 +5,14 @@
 }
 
 .explore-things {
-    font-size: 22px;
     border: 0.8px solid rgba(40, 40, 40, 0.2);
-    border-radius: 15px;
+    border-radius: 15px !important;
+    font-size: 22px;
     padding: 23px 20px;
-}
-.explore-things p {
     color: #282828;
-    margin: 0;
+    margin: 0 0 10px;
 }
+
 
 @media screen and (max-width:767px) {
     .explore-title {
@@ -24,7 +23,7 @@
     .explore-title {
         font-size: 20px;
     }
-    .explore-things > p {
+    .explore-things  {
         font-size: 15px;
     }
 }
