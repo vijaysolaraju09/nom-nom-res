@@ -30,7 +30,7 @@ const ResDetails = () => {
         // setPhone(res[0]["phone_number"])
     }, [res])
 
-
+    const mapAddress = Object.values(address).join(", ");
     return (
         <>
             <div className='res-details'>
@@ -60,12 +60,25 @@ const ResDetails = () => {
                                     <header class="cards-header m-2 mt-3 p-4 shadow">
                                         <h2>{title}</h2>
 
-                                        <address>
-                                            <span class="icon-pin" aria-hidden="true"></span>
-                                            {Object.values(address).join(" ")}
-                                        </address>
+                                        {/* <div className='d-flex align-items-start'>
+                                            <h5>Address: </h5>
+                                            
+                                            <address className='text-start px-3'>
+                                            {Object.values(address).join(", ")}
+                                            </address>
+                                        </div>
 
-                                        <span>Average check: $100</span>
+                                        <div className='text-start d-flex'><h5>Call </h5>:<a className='d-block px-3 '>{phone}</a></div> */}
+                                        <table style={{width:"100%"}}>
+                                            <tr>
+                                                <th className='d-flex justify-content-end'>Address: </th>
+                                                <td className='text-start px-3'><a href={`http://maps.google.com/?q=${mapAddress}}`} className="text-decoration-none">{Object.values(address).join(", ")}</a></td>
+                                            </tr>
+                                            <tr>
+                                                <th className='d-flex justify-content-end'>Call :</th>
+                                                <td className='text-start px-3'><a className='' href={`tel:${phone}`}>{phone}</a></td>
+                                            </tr>
+                                        </table>
                                     </header>
                                     <div class="card-content p-2 ">
 
