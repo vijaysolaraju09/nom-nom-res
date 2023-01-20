@@ -22,7 +22,7 @@ const ResDetails = () => {
     });
     console.log("Res===>", res);
 
-    const { name: title, food_photos: imgUrl, phone_number: phone, address, weighted_rating_value: rating, cuisines: dishes, delivery: delivery_time,local_hours } = res[0];
+    const { name: title, food_photos: imgUrl, phone_number: phone, address, weighted_rating_value: rating, cuisines: dishes, delivery: delivery_time, local_hours } = res[0];
 
     useEffect(() => {
         // setTitle(res[0]["name"])
@@ -86,7 +86,7 @@ const ResDetails = () => {
                                             </li>
                                             <button class="card-button">Book table</button>
                                         </ul>
-                                        
+
                                     </div>
                                 </div>
                             </div>
@@ -95,11 +95,11 @@ const ResDetails = () => {
                                 <h2>
                                     All Dishes
                                 </h2>
-                                <ul>
-                                    <li>
-                                        {Object.values(dishes).join(" ")}
-                                    </li>
-                                </ul>
+                                <div>
+                                    <div>
+                                        {Object.values(dishes).join(", ")}
+                                    </div>
+                                </div>
                             </div>
                             <div className='m-2'>
                                 <Tabs fill defaultActiveKey="dineIn" id="uncontrolled-tab-example" className='timings-tab'>
@@ -113,11 +113,21 @@ const ResDetails = () => {
                                             <h2>
                                                 Dinin Timings
                                             </h2>
-                                            <ul>
-                                                <li>
-                                                    {Object.values(local_hours.dine_in).join(" ")}
-                                                </li>
-                                            </ul>
+                                            <div>
+                                                <div className='d-flex'>
+                                                    <div>
+                                                        {Object.keys(local_hours.dine_in).map((days) => (
+                                                            <span className='d-block'>{days}</span>
+                                                        ))}
+                                                    </div>
+                                                    <div>
+
+                                                        {Object.values(local_hours.dine_in).map((time) => (
+                                                            <span className='d-block'>: {time}</span>
+                                                        ))}
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </TabContent>
                                     </Tab>
                                     <Tab
@@ -128,13 +138,23 @@ const ResDetails = () => {
                                     >
                                         <TabContent tabTitle="Operational" className='timings p-4'>
                                             <h2>
-                                            Operational Timings
+                                                Operational Timings
                                             </h2>
-                                            <ul>
-                                                <li>
-                                                    {Object.values(local_hours.operational).join(" ")}
-                                                </li>
-                                            </ul>
+                                            <div>
+                                                <div className='d-flex'>
+                                                    <div>
+                                                        {Object.keys(local_hours.operational).map((days) => (
+                                                            <span className='d-block'>{days}</span>
+                                                        ))}
+                                                    </div>
+                                                    <div>
+
+                                                        {Object.values(local_hours.operational).map((time) => (
+                                                            <span className='d-block'>: {time}</span>
+                                                        ))}
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </TabContent>
                                     </Tab>
                                     <Tab
@@ -148,11 +168,21 @@ const ResDetails = () => {
                                             <h2>
                                                 Pick Up Timings
                                             </h2>
-                                            <ul>
-                                                <li>
-                                                    {Object.values(local_hours.pickup).join(" ")}
-                                                </li>
-                                            </ul>
+                                            <div>
+                                                <div className='d-flex'>
+                                                    <div>
+                                                        {Object.keys(local_hours.pickup).map((days) => (
+                                                            <span className='d-block'>{days}</span>
+                                                        ))}
+                                                    </div>
+                                                    <div>
+
+                                                        {Object.values(local_hours.pickup).map((time) => (
+                                                            <span className='d-block'>: {time}</span>
+                                                        ))}
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </TabContent>
                                     </Tab>
                                     <Tab
@@ -163,21 +193,31 @@ const ResDetails = () => {
                                     >
                                         <TabContent tabTitle="Delivery" className='timings p-4'>
                                             <h2>
-                                               Delivery Timings
+                                                Delivery Timings
                                             </h2>
-                                            <ul>
-                                                <li>
-                                                    {Object.values(local_hours.delivery).join(" ")}
-                                                </li>
-                                            </ul>
+                                            <div>
+                                                <div className='d-flex'>
+                                                    <div>
+                                                        {Object.keys(local_hours.delivery).map((days) => (
+                                                            <span className='d-block'>{days}</span>
+                                                        ))}
+                                                    </div>
+                                                    <div>
+
+                                                        {Object.values(local_hours.delivery).map((time) => (
+                                                            <span className='d-block'>: {time}</span>
+                                                        ))}
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </TabContent>
                                     </Tab>
                                 </Tabs>
 
                             </div>
 
-                            
-                            
+
+
                         </article>
 
                     </div>
