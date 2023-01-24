@@ -12,7 +12,7 @@ export default function Banner() {
                         <h3 className="banner-sub-title text-center">Discover the best food &amp; drinks in mumbai</h3>
 
                         <div className="search-cont d-flex align-items-center ">
-                            <div className="location-cont pe-2">
+                            <div className="location-cont py-1 px-2">
                                 <img
                                     src="./images/location-icon.png"
                                     className="m-0"
@@ -26,7 +26,7 @@ export default function Banner() {
                                     <option>Chennai</option>
                                 </select>
                             </div>
-                            <div className="input-cont p-0">
+                            <div className="input-cont py-1 px-2">
                                 <img
                                     src="./images/search-icon.png"
                                     alt="search"
