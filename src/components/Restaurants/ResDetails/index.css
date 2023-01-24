@@ -1,5 +1,5 @@
 .res-details {
-    margin-top: 100px;
+    padding-top: 100px;
     background: #d2eaff;
 }
 .review-icon {
@@ -20,4 +20,7 @@
     border-radius: 10px;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
+}
+.timings-tab .nav-link {
+    border: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color)!important;
 }

@@ -2,5 +2,19 @@
     font-weight: 100;
 }
 .profile-container {
-    background: #d57e8d3d;
+    height: 100vh;
+    padding-top: 100px;
+}
+.profile-container > div {
+    max-width: 450px;
+    margin: auto;
+}
+
+@media only screen and (min-width: 768px) {
+    .card-img-top {
+        max-width: 500px;
+    }
+    .profile-container > div {
+        max-width: 100%;
+    }
 }

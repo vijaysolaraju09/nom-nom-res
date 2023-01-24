@@ -70,10 +70,10 @@ input.error {
 */
 /* ------------------------------------------------- */
 .sign-up-btn {
-    padding: 10px 145px !important;
+    padding: 10px 120px !important;
 }
 .login-with-google-btn {
-    padding: 10px 85px;
+    padding: 10px 60px;
     border: none;
     border-radius: 35px;
     box-shadow: 0 -1px 0 rgba(0, 0, 0, .04), 0 1px 1px rgba(0, 0, 0, .25);
@@ -113,7 +113,7 @@ input.error {
 
 .horizontal-line {
     position: relative;
-    width: 350px;
+    width: 300px;
 }
 .horizontal-line span {
     position: absolute;
@@ -121,4 +121,16 @@ input.error {
     left: 46%;
     background: white;
     padding: 0 5px;
+}
+
+@media only screen and (min-width: 600px) {
+    .sign-up-btn {
+        padding: 10px 145px !important;
+    }
+    .horizontal-line {
+        width: 350px;
+    }
+    .login-with-google-btn {
+        padding: 10px 85px;
+    }
 }

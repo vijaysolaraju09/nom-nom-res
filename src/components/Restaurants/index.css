@@ -25,12 +25,9 @@
 
 .card-image img {
     display: block;
-    /* width: 100%; */
-    width: 300px;
-}
-
-.card-content {
-    /* padding: 1.3125em; */
+    width: 100%;
+    /* width: 300px; */
+    height: 180px;
 }
 
 .cards-header {
@@ -105,6 +102,15 @@
     background: white;
     color: rgb(70, 153, 179);
     border: 1px solid rgb(70, 153, 179);
+}
+
+.res-card {
+    width: 21rem;
+}
+.res-card:hover {
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;
+    border-radius: var(--bs-border-radius-xl)!important;
+    background: rgba(238, 235, 235, 0.175);
 }
 
 /*   

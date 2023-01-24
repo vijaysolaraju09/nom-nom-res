@@ -1,5 +1,5 @@
 .welcome-cont {
-    padding: 75px;
+    padding-top: 25px;
 }
 .welcome {
     background: #d2eaff;
@@ -24,4 +24,13 @@
 }
 .sign-in-link {
     color: rgb(70, 153, 179);
+}
+
+@media only screen and (min-width: 992px) {
+    .welcome-cont > div {
+        width: 75%;
+    }
+    .welcome-cont {
+        padding-top: 60px;
+    }
 }

@@ -1,11 +1,13 @@
 
 .login-page {
     background: #d2eaff;
-    padding: 100px;
+    height: 100vh;
+    padding: 100px 0;
 }
 .login-cont {
     background-color: white;
-    width: 600px;
+    max-width: 600px;
+    padding: 40px 20px;
 }
 
 .form-container {
@@ -16,9 +18,9 @@
     color: #1d2129;
     padding: 10px;
     outline: none;
-    margin-bottom: 20px;
+    margin:0 auto 20px ;
     border-radius: 5px;
-    width: 360px;
+    width: 300px;
 }
 
 input {
@@ -43,7 +45,7 @@ input.error {
 }
 
 .form-container button {
-    padding: 10px 155px;
+    padding: 10px 130px;
     background-color: rgb(70, 153, 179);
     color: white;
     border: 1px solid rgb(70, 153, 179);
@@ -71,4 +73,10 @@ input.error {
 .form-container label {
     margin-bottom: 10px;
     font-size: 20px;
+}
+
+@media only screen and (min-width: 600px) {
+    .form-container input {
+        width: 360px;
+    }
 }

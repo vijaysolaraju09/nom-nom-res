@@ -34,7 +34,7 @@ const ResDetails = () => {
     return (
         <>
             <div className='res-details'>
-                <div className='container'>
+                <div className=''>
                     {/* <Card style={{ width: '18rem' }}>
                 <Card.Img variant="top" src={imgUrl} />
                 <Card.Body>
@@ -48,11 +48,11 @@ const ResDetails = () => {
                     <Button variant="primary">Go somewhere</Button>
                 </Card.Body>
             </Card> */}
-                    <div class=" p-5">
+                    <div class=" p-2 p-sm-5">
 
                         <article id="card" class="cards rounded-3">
 
-                            <div className='d-flex border'>
+                            <div className='d-flex border flex-column flex-lg-row'>
                                 <figure class="card-image d-flex">
                                     <img src={imgUrl} alt="" />
                                 </figure>
@@ -69,7 +69,7 @@ const ResDetails = () => {
                                         </div>
 
                                         <div className='text-start d-flex'><h5>Call </h5>:<a className='d-block px-3 '>{phone}</a></div> */}
-                                        <table style={{width:"100%"}}>
+                                        <table style={{ width: "100%" }}>
                                             <tr>
                                                 <th className='d-flex justify-content-end'>Address: </th>
                                                 <td className='text-start px-3'><a href={`http://maps.google.com/?q=${mapAddress}}`} className="text-decoration-none">{Object.values(address).join(", ")}</a></td>
@@ -80,18 +80,13 @@ const ResDetails = () => {
                                             </tr>
                                         </table>
                                     </header>
-                                    <div class="card-content p-2 ">
-
-
-                                        <ul class="card-stats d-flex flex-row justify-content-around">
+                                    <div class=" p-2 ">
+                                        <ul class="card-stats d-flex flex-column flex-md-row justify-content-around">
                                             <li className='d-flex align-items-center'>
                                                 <FaStar fill='#faa744' className='review-icon me-2' />
                                                 <strong className='me-2'>{parseFloat(rating).toFixed(2)}</strong>
                                                 <p>Rating</p>
                                             </li>
-
-
-
                                             <li className='d-flex align-items-center'>
                                                 <BiDish className='review-icon  me-2' />
                                                 <strong className='me-2'>{dishes.length}</strong>

@@ -12,7 +12,7 @@ export default function Banner() {
                         <h3 className="banner-sub-title text-center">Discover the best food &amp; drinks in mumbai</h3>
 
                         <div className="search-cont d-flex align-items-center ">
-                            <div className="location-cont p-0 pe-2">
+                            <div className="location-cont pe-2">
                                 <img
                                     src="./images/location-icon.png"
                                     className="m-0"

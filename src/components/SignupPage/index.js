@@ -40,13 +40,13 @@ function SignupPage() {
   }
 
   return (
-    <div className="login-page d-flex flex-column justify-content-center">
-      <div className="container d-flex flex-column align-items-center">
-        <div className="shadow login-cont rounded-5 p-5 mt-5 d-flex flex-column align-items-center">
+    // <div className=" d-flex flex-column justify-content-center">
+      <div className="login-page h-100 d-flex flex-column align-items-center">
+        <div className="shadow login-cont rounded-5 p-sm-5  d-flex flex-column align-items-center">
           <h2 className=" mb-2 ">Welcome User</h2>
           <p className=" text-secondary  mb-4 ">Please Register for free to get started.</p>
           
-            <form className="form-container mx-5 my-3">
+            <form className="form-container mx-sm-5 my-3">
               <label htmlFor="email">Email</label>
               <input
                 name="email"
@@ -76,7 +76,7 @@ function SignupPage() {
             <button className="login-with-google-btn " onClick={signInWithGoogle}><i className="fab fa-google"></i>Sign in with google</button>
           </div>
         </div>
-      </div>
+      // </div>
 
 
   )

@@ -27,20 +27,20 @@ function LoginPage() {
   };
   return (
     <>
-      <div className="login-page d-flex flex-column justify-content-center">
-        <div className="container d-flex flex-column align-items-center">
-          <div className="shadow login-cont rounded-5 p-5 mt-5 d-flex flex-column align-items-center">
+      {/* <div className=" d-flex flex-column justify-content-start justify-content-md-center"> */}
+        <div className=" login-page d-flex flex-column align-items-center">
+          <div className="shadow login-cont rounded-5 p-sm-5  d-flex flex-column align-items-center">
             <h2 className=" mb-2 ">Welcome Back</h2>
             <p className=" text-secondary  mb-4 ">Please sign in below to get started.</p>
-            <form className="form-container mx-5 mt-3" onSubmit={login}>
-              <label htmlFor="email">Email</label>
+            <form className="form-container mx-sm-5 mt-3" onSubmit={login}>
+              <label htmlFor="email" className="">Email</label>
               <input
                 name="email"
                 type="text"
                 placeholder="Enter your email"
                 onChange={e => setLoginEmail(e.target.value)}
               />
-              <label htmlFor="email">Password</label>
+              <label htmlFor="email" className="">Password</label>
               <input
                 name="password"
                 type="password"
@@ -53,7 +53,7 @@ function LoginPage() {
             </form>
           </div>
         </div>
-      </div>
+      {/* </div> */}
     </>
   );
 

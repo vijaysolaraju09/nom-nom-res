@@ -4,11 +4,11 @@ import './index.css'
 function Welcome() {
     return (
         <div className=' welcome'>
-            <div className='container d-flex justify-content-center  welcome-cont'>
+            <div className='d-flex justify-content-center  welcome-cont'>
 
-                <div className='text-center shadow w-75 mt-5 rounded-3'>
+                <div className='text-center shadow mt-5 rounded-3'>
                     <img src='./images/banner.png' className="welcome-img w-100 rounded-3" />
-                    <div className='px-5 py-5'>
+                    <div className='p-2 px-md-5 py-md-5'>
                         <h1 className=''>Welcome to NOM-<span className='text-danger'>NOM</span></h1>
                         <p className='d-inline-block mb-5'> Please Login to ExplorePlease Login to ExplorePlease Login to ExplorePlease Login to ExplorePlease Login to ExplorePlease Login to ExplorePlease Login to Explore....</p>
 
