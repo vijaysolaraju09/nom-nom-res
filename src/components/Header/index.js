@@ -14,7 +14,7 @@ const Navbar = () => {
       <header className={`header container-fluid ${headerBackground}`}>
         
         <nav className="navbar navbar-expand-lg navbar-light p-0">
-          <Link className="nav-brands navbar-brand p-0" to="/"><img className='nav-logos mb-1' src="./images/get-app.png" alt="logo" />Get the App</Link>
+          <Link className="nav-brands navbar-brand  p-0" to="/"><img className='nav-logos mb-1' src="./images/get-app.png" alt="logo" />Get the App</Link>
           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
@@ -36,7 +36,7 @@ const Navbar = () => {
                 <Link className="nav-link" to='/my-tables'>My Tables</Link>
               </li>}
               { user!=null && <li className="nav-item">
-                <Link className="nav-link" to='/profile'>Profile</Link>
+                <Link className="nav-link m-lg-0" to='/profile'>Profile</Link>
               </li>}
             </ul>
           </div>
