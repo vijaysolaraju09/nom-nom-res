@@ -21,7 +21,7 @@ const Navbar = () => {
           <div className="collapse navbar-collapse" id="navbarText">
             <ul className="navbar-nav mr-auto">
               <li className="nav-item">
-                <Link className="nav-link" href="#">Investor Relations</Link>
+                <Link className="nav-link" to="/">Home</Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to='/restaurants'>Add restaurant</Link>
@@ -33,7 +33,7 @@ const Navbar = () => {
                 <Link className="nav-link" to="/signup">Sign Up</Link>
               </li>}
               { user!=null && <li className="nav-item">
-                <Link className="nav-link" to='/items'>Items</Link>
+                <Link className="nav-link" to='/my-tables'>My Tables</Link>
               </li>}
               { user!=null && <li className="nav-item">
                 <Link className="nav-link" to='/profile'>Profile</Link>

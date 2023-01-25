@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import "./index.css";
 import axios from "axios";
 import { FaCaretRight } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 // const collectionsCont = [
 //   {
@@ -55,7 +56,7 @@ const Collections = (props) => {
             Explore curated lists of top restaurants, cafes, pubs, and bars in
             Mumbai, based on trends
           </p>
-          <p className="collections-right">All Collections in Mumbai <FaCaretRight fill="rgba(238, 46, 43, 0.7)" /></p>
+          <Link className="collections-right text-decoration-none" to='/restaurants'>All Collections in Mumbai <FaCaretRight fill="rgba(238, 46, 43, 0.7)" /></Link>
         </div>
 
         <div className="d-flex justify-content-around justify-content-lg-start collections-container">

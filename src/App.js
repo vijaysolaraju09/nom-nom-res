@@ -10,7 +10,7 @@ import Home from './components/Home';
 import Welcome from './components/Welcome'
 import Restaurants from './components/Restaurants'
 import Profile from './components/Profile';
-import Items from './components/Items';
+import MyTables from './components/MyTables';
 import  Protected  from './components/Protected';
 import Unprotected from './components/Unprotected';
 import ResDetails from './components/Restaurants/ResDetails'
@@ -30,7 +30,7 @@ function App() {
             <Route path='/restaurants' element={<Protected><Restaurants /></Protected>}></Route>
             <Route path='/login' element={<Unprotected><LoginPage /></Unprotected>}></Route>
             <Route path='/signup' element={<Unprotected><SignupPage /></Unprotected>}></Route>
-            <Route path='/items' element={<Protected><Items /></Protected>} ></Route>
+            <Route path='/my-tables' element={<Protected><MyTables /></Protected>} ></Route>
             <Route path='/profile' element={<Protected><Profile /></Protected>}></Route>
             <Route path='/restaurant-details/:_id' element={<Protected><ResDetails /></Protected>}></Route>
 

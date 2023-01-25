@@ -16,6 +16,10 @@
 .collections-right {
     font-size: 18px;
     color: rgba(238, 46, 43, 0.7);
+    text-decoration: none;
+}
+.collections-right:hover {
+    color: rgba(238, 46, 43, 0.7);
 }
 
 .cards-title, .cards-text {

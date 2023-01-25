@@ -4,6 +4,13 @@
     color: #282828;
 }
 
+.accordion-button:active, .accordion-button:focus {
+    background: white !important;
+    color: #282828;
+    box-shadow: none;
+    border: 0.8px solid rgba(40, 40, 40, 0.2);
+}
+
 .explore-things {
     border: 0.8px solid rgba(40, 40, 40, 0.2);
     border-radius: 15px !important;

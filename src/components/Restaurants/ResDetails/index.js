@@ -2,7 +2,7 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import { useLocation, useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import './index.css'
 import { FaStar } from 'react-icons/fa'
 import { BiDish } from 'react-icons/bi'
@@ -15,8 +15,8 @@ const ResDetails = () => {
     // const [imgUrl, setImgUrl ] = useState()
     // const [phone, setPhone ] = useState()
     // const [resData, setResData ] = useState({title:'Res Name',})
+    const navigate = useNavigate();
     const { _id } = useParams();
-    // console.log(_id)
     const res = restaurants.filter((item) => {
         return item._id == _id;
     });
@@ -92,7 +92,7 @@ const ResDetails = () => {
                                                 <strong className='me-2'>{dishes.length}</strong>
                                                 <p>Dishes</p>
                                             </li>
-                                            <button class="card-button">Book table</button>
+                                            <button class="card-button" onClick={() => { navigate(`/my-tables/${_id}`) }}>Book table</button>
                                         </ul>
 
                                     </div>

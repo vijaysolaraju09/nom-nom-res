@@ -17,7 +17,7 @@ function Profile() {
             <div className=' profile-container px-3'>
 
                     <div className=" d-md-flex shadow-lg border border-2 rounded-3">
-                        <img src="./images/night-life.png" className="card-img-top rounded-2" alt="..." />
+                        <img src="./images/user.png" className="card-img-top rounded-2" alt="..." />
                         <div className=" d-flex flex-column justify-content-center align-items-start  p-5 ">
                             <h5 className=" d-flex">User: <span className='user'>{user.displayName?user.displayName:"Admin"}</span></h5>
                             <h5 className=" d-flex">Email: <span>{user.email}</span></h5>
